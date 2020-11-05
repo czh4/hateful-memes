@@ -1,0 +1,17 @@
+includes:
+- mmf-hateful-memes/projects/vilbert/configs/hateful_memes/from_cc.yaml
+
+dataset_config:
+  hateful_memes:
+    max_features: 36
+    processors:
+      text_processor:
+        params:
+          max_length: 32
+          max_seq_length: 64
+
+training:
+  batch_size: 32
+  max_updates: 10000
+  checkpoint_interval: 500
+  evaluation_interval: 500

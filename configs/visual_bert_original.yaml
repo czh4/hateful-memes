@@ -1,0 +1,10 @@
+includes:
+- mmf-hateful-memes/projects/visual_bert/configs/hateful_memes/from_coco.yaml
+
+dataset_config.hateful_memes.processors.text_processor.params.max_seq_length: 96
+
+training:
+  batch_size: 8
+  max_updates: 10000
+  checkpoint_interval: 500
+  evaluation_interval: 500
