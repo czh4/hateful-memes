@@ -1,5 +1,5 @@
 includes:
-- mmf-hateful-memes/projects/vilbert/configs/hateful_memes/from_cc.yaml
+- ../mmf-hateful-memes/projects/vilbert/configs/hateful_memes/from_cc.yaml
 
 dataset_config.hateful_memes.processors.text_processor.params.max_seq_length: 96
 
