@@ -1,8 +1,21 @@
 includes:
 - ../mmf-hateful-memes/projects/visual_bert/configs/hateful_memes/from_coco.yaml
 
+env:
+  save_dir: ./save
+  log_dir: ./logs
+
 dataset_config:
   hateful_memes:
+    data_dir: datasets
+    features:
+      train: features/detectron.lmdb
+      val: features/detectron.lmdb
+      test: features/detectron.lmdb
+    annotations:
+      train: annotations/train.jsonl
+      val: annotations/dev_unseen.jsonl
+      test: annotations/test_unseen.jsonl
     max_features: 36
     processors:
       text_processor:

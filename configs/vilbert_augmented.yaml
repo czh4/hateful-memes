@@ -1,6 +1,10 @@
 includes:
 - ../mmf-hateful-memes/projects/vilbert/configs/hateful_memes/from_cc.yaml
 
+env:
+  save_dir: ./save
+  log_dir: ./logs
+
 dataset_config:
   hateful_memes:
     data_dir: datasets
