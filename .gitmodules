@@ -1,0 +1,3 @@
+[submodule "mmf-hateful-memes"]
+	path = mmf-hateful-memes
+	url = https://github.com/czh4/mmf-hateful-memes.git
