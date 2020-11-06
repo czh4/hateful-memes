@@ -2,8 +2,8 @@ includes:
 - ../mmf-hateful-memes/projects/visual_bert/configs/hateful_memes/from_coco.yaml
 
 env:
-  save_dir: ./save
-  log_dir: ./logs
+  save_dir: save
+  data_dir: datasets
 
 dataset_config:
   hateful_memes:
@@ -13,7 +13,7 @@ dataset_config:
       val: features/detectron.lmdb
       test: features/detectron.lmdb
     annotations:
-      train: annotations/train.jsonl
+      train: annotations/train_caption.jsonl
       val: annotations/dev_unseen.jsonl
       test: annotations/test_unseen.jsonl
     max_features: 36

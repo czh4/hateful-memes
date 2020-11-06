@@ -2,8 +2,8 @@ includes:
 - ../mmf-hateful-memes/projects/visual_bert/configs/hateful_memes/from_coco.yaml
 
 env:
-  save_dir: ./save
-  log_dir: ./logs
+  save_dir: save
+  data_dir: datasets
 
 dataset_config:
   hateful_memes:
