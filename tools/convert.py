@@ -17,6 +17,8 @@ class HMConverter:
     JSONL_PHASE_ONE_FILES = ["train.jsonl", "dev.jsonl", "test.jsonl"]
     JSONL_PHASE_TWO_FILES = [
         "train.jsonl",
+        "train_back_translation.jsonl",
+        "train_caption.jsonl",
         "dev_seen.jsonl",
         "test_seen.jsonl",
         "dev_unseen.jsonl",
