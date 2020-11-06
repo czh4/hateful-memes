@@ -5,11 +5,13 @@ A demo colab notebook is available [here](https://colab.research.google.com/driv
 ## Prerequisites
 
 Download the zip file from [here](https://drive.google.com/file/d/1CvAApbvMS2TQVmrbwoalBXaRQfaHk0ik/view?usp=sharing)
-Then `$ python tools/convert.py --zip_file='zip file location' --bypass_checksum=1 --mmf_data_folder='datasets'`
+
+Convert files `$ python tools/convert.py --zip_file='zip file location' --bypass_checksum=1 --mmf_data_folder='datasets'`
 
 ## Models and Methods
 
 It supports 2 type of models, ViLBERT CC and Visual BERT COCO.
+
 Methods include original, back translation, image captioning, and image augmentation.
 
 | Model Method                   | Model Key   | Config                                    |
@@ -24,4 +26,5 @@ Methods include original, back translation, image captioning, and image augmenta
 ## Start Training
 
 `$ python tools/run.py config=<CONFIG> model=<MODEL KEY> dataset=hateful_memes`
+
 This will save the training outputs to an experiment folder under `./save` directory.
