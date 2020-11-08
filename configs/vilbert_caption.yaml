@@ -14,8 +14,8 @@ dataset_config:
       test: features/detectron.lmdb
     annotations:
       train: annotations/train_caption.jsonl
-      val: annotations/dev_unseen.jsonl
-      test: annotations/test_unseen.jsonl
+      val: annotations/dev_unseen_caption.jsonl
+      test: annotations/test_unseen_caption.jsonl
     max_features: 36
     processors:
       text_processor:
