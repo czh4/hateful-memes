@@ -19,6 +19,7 @@ dataset_config:
     processors.text_processor.params.max_seq_length: 96
 
 training:
+  seed: 1234
   batch_size: 16
   max_updates: 10000
   checkpoint_interval: 500

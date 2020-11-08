@@ -2,8 +2,8 @@ includes:
 - ../mmf-hateful-memes/projects/vilbert/configs/hateful_memes/from_cc.yaml
 
 env:
-  save_dir: ./save
-  log_dir: ./logs
+  save_dir: save
+  data_dir: datasets
 
 dataset_config:
   hateful_memes:
@@ -13,14 +13,19 @@ dataset_config:
       val: features/detectron.lmdb
       test: features/detectron.lmdb
     annotations:
-      train: annotations/train_back_translation.jsonl
-      val: annotations/dev_unseen.jsonl
-      test: annotations/test_unseen.jsonl
-    processors.text_processor.params.max_seq_length: 96
+      train: annotations/train_objects.jsonl
+      val: annotations/dev_unseen_objects.jsonl
+      test: annotations/test_unseen_objects.jsonl
+    max_features: 36
+    processors:
+      text_processor:
+        params:
+          max_length: 64
+          max_seq_length: 96
 
 training:
   seed: 1234
-  batch_size: 16
+  batch_size: 32
   max_updates: 10000
   checkpoint_interval: 500
   evaluation_interval: 500
