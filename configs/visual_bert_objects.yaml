@@ -16,7 +16,7 @@ dataset_config:
       train: annotations/train_objects.jsonl
       val: annotations/dev_unseen_objects.jsonl
       test: annotations/test_unseen_objects.jsonl
-    max_features: 36
+    max_features: 24
     processors:
       text_processor:
         params:
@@ -25,7 +25,7 @@ dataset_config:
 
 training:
   seed: 1234
-  batch_size: 16
+  batch_size: 32
   max_updates: 10000
   checkpoint_interval: 500
   evaluation_interval: 500

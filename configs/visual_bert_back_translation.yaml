@@ -16,11 +16,16 @@ dataset_config:
       train: annotations/train_back_translation.jsonl
       val: annotations/dev_unseen.jsonl
       test: annotations/test_unseen.jsonl
-    processors.text_processor.params.max_seq_length: 96
+    max_features: 36
+    processors:
+      text_processor:
+        params:
+          max_length: 40
+          max_seq_length: 64
 
 training:
   seed: 1234
-  batch_size: 8
+  batch_size: 32
   max_updates: 10000
   checkpoint_interval: 500
   evaluation_interval: 500
