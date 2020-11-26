@@ -15,7 +15,7 @@ dataset_config:
     annotations:
       train: annotations/train_back_translation.jsonl
       val: annotations/dev_unseen.jsonl
-      test: annotations/test_unseen.jsonl
+      test: annotations/test_seen.jsonl
     max_features: 36
     processors:
       text_processor:

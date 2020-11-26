@@ -15,7 +15,7 @@ dataset_config:
     annotations:
       train: annotations/train_caption_objects.jsonl
       val: annotations/dev_unseen_caption_objects.jsonl
-      test: annotations/test_unseen_caption_objects.jsonl
+      test: annotations/test_seen_caption_objects.jsonl
     max_features: 36
     processors:
       text_processor:
@@ -25,7 +25,7 @@ dataset_config:
 
 training:
   seed: 1234
-  batch_size: 32
+  batch_size: 8
   max_updates: 10000
   checkpoint_interval: 500
   evaluation_interval: 500

@@ -15,7 +15,7 @@ dataset_config:
     annotations:
       train: annotations/train.jsonl
       val: annotations/dev_unseen.jsonl
-      test: annotations/test_unseen.jsonl
+      test: annotations/test_seen.jsonl
     processors.text_processor.params.max_seq_length: 96
 
 training:

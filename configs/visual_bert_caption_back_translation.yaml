@@ -13,14 +13,14 @@ dataset_config:
       val: features/detectron.lmdb
       test: features/detectron.lmdb
     annotations:
-      train: annotations/train_back_translation.jsonl
-      val: annotations/dev_unseen.jsonl
-      test: annotations/test_seen.jsonl
+      train: annotations/train_caption_back_translation.jsonl
+      val: annotations/dev_unseen_caption.jsonl
+      test: annotations/test_seen_caption.jsonl
     max_features: 36
     processors:
       text_processor:
         params:
-          max_length: 40
+          max_length: 32
           max_seq_length: 64
 
 training:
