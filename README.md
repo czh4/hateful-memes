@@ -4,24 +4,34 @@ A demo colab notebook is available [here](https://colab.research.google.com/driv
 
 ## Prerequisites
 
-Download the zip file from [here](https://drive.google.com/file/d/1CvAApbvMS2TQVmrbwoalBXaRQfaHk0ik/view?usp=sharing)
+Download the zip file from [here](https://drive.google.com/file/d/1YJKmx4HaymEUBP-u93IFDT9UH-V1dCu5/view?usp=sharing)
 
-Convert files `$ python tools/convert.py --zip_file='zip file location' --bypass_checksum=1 --mmf_data_folder='datasets'`
+Unzip files to hateful-memes/datasets
 
 ## Models and Methods
 
 It supports 2 type of models, ViLBERT CC and Visual BERT COCO.
 
-Methods include original, back translation, image captioning, and image augmentation.
+Methods include original, text augmentation (back translation), image captioning, and object labels.
 
-| Model Method                   | Model Key   | Config                                    |
-|--------------------------------|-------------|-------------------------------------------|
-| vilbert + original             | vilbert     | configs/vilbert_original.yaml             |
-| vilbert + back translation     | vilbert     | configs/vilbert_back_translation.yaml     |
-| vilbert + image captioning     | vilbert     | configs/vilbert_caption.yaml              |
-| visual bert + original         | visual_bert | configs/visual_bert_original.yaml         |
-| visual bert + back translation | visual_bert | configs/visual_bert_back_translation.yaml |
-| visual bert + image captioning | visual_bert | configs/visual_bert_caption.yaml          |
+| Model Key   | Method                                               | Config                                                    |
+|-------------|------------------------------------------------------|-----------------------------------------------------------|
+| vilbert     | original                                             | configs/vilbert_original.yaml                             |
+| vilbert     | text augmentation                                    | configs/vilbert_back_translation.yaml                     |
+| vilbert     | object labels                                        | configs/vilbert_objects.yaml                              |
+| vilbert     | object labels + text augmentation                    | configs/vilbert_objects_back_translation.yaml             |
+| vilbert     | image captioning                                     | configs/vilbert_caption.yaml                              |
+| vilbert     | image captioning + text augmentation                 | configs/vilbert_caption_back_translation.yaml             |
+| vilbert     | image captioning + object labels                     | configs/vilbert_caption_objects.yaml                      |
+| vilbert     | image captioning + object labels + text augmentation | configs/vilbert_caption_objects_back_translation.yaml     |
+| visual_bert | original                                             | configs/visual_bert_original.yaml                         |
+| visual_bert | text augmentation                                    | configs/visual_bert_back_translation.yaml                 |
+| visual_bert | object labels                                        | configs/visual_bert_objects.yaml                          |
+| visual_bert | object labels + text augmentation                    | configs/visual_bert_objects_back_translation.yaml         |
+| visual_bert | image captioning                                     | configs/visual_bert_caption.yaml                          |
+| visual_bert | image captioning + text augmentation                 | configs/visual_bert_caption_back_translation.yaml         |
+| visual_bert | image captioning + object labels                     | configs/visual_bert_caption_objects.yaml                  |
+| visual_bert | image captioning + object labels + text augmentation | configs/visual_bert_caption_objects_back_translation.yaml |
 
 ## Start Training
 
