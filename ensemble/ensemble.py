@@ -62,4 +62,4 @@ elif args.method == 'avg':
 test_df['proba'] = pred
 test_df['label'] = test_df['proba'].apply(lambda x : 1 if x>=0.5 else 0)
 
-test_df[['id','proba','label']].to_csv(os.path.join(path,'ensemble.csv'), index=False)
+test_df[['id','proba','label']].to_csv('ensemble.csv', index=False)
